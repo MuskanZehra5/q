@@ -18,7 +18,7 @@ To deploy the application to Firebase Hosting, follow these steps:
 
 2. **Navigate to the Build Output Folder**:
    ```bash
-   cd dist/sekuverify/browser
+   cd dist
    ```
    This folder contains the compiled files ready for deployment.
 
