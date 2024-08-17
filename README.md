@@ -62,3 +62,4 @@ Fullstack with Django:
 # github pages select no 
 # firebase deploy
 # successfully deployed
+# Angular 17 Firebase CRUD SekuVerify an app to verify QrCodes
