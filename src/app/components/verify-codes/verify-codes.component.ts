@@ -6,19 +6,18 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-verify-codes',
   templateUrl: './verify-codes.component.html',
-  styleUrl: './verify-codes.component.css'
+  styleUrls: ['./verify-codes.component.css']
 })
-export class VerifyCodesComponent{
+export class VerifyCodesComponent implements OnInit {
   key: string = '';
   searchResults?: Qrcode | null;
   keyExists: boolean = false;
   title: string = "";
   show: boolean = false;
-  color = '#155724';
-  backgroundcolor = '#d4edda';
+  alertClass = 'alert-info';
+  animationClass: string = '';
 
   @Output() searchByKey: EventEmitter<string> = new EventEmitter<string>();
-
 
   constructor(private route: ActivatedRoute, private QrcodeService: QrcodeService) { }
 
@@ -39,12 +38,14 @@ export class VerifyCodesComponent{
 
   onSearchByKey(): void {
     this.show = true;
+    this.animationClass = 'slide-in';
     if (this.key.trim() !== '') {
       this.QrcodeService.searchByKey(this.key.trim()).subscribe(
         (results) => {
           this.keyExists = results != null && results != undefined;
           this.searchResults = results;
           this.updateOpened();
+          this.updateTitle();
         },
         (error) => {
           console.error('Error searching by key:', error);
@@ -57,43 +58,35 @@ export class VerifyCodesComponent{
       this.keyExists = false;
     }
   }
-  
 
-  updateOpened(): void{
-   const data ={
+  updateOpened(): void {
+    const data = {
       opened: (this.searchResults?.opened ?? 0) + 1,
     }
-    this.updateTitle()
-
     if (this.searchResults?.key) {
       this.QrcodeService.update(this.searchResults.key, data)
         .catch(err => console.log(err));
     }
   }
 
-  updateTitle(): void{
-    switch(this.searchResults?.opened){
-      case 0:
+  updateTitle(): void {
+      switch(this.searchResults?.opened) {
+        case 0:
           this.title = "This Product is Original";
-          this.color = '#155724';
-          this.backgroundcolor = '#d4edda';
+          this.alertClass = "alert-primary";
           break;
-      case 1:
-          this.title = `Already Verified ${this.searchResults?.opened} time`;
-          this.color = '#d4d8ed';
-          this.backgroundcolor = '#151957';
+        case 1:
+          this.title = `Verified once`;
+          this.alertClass = "alert-info";
           break;
-      case 2: 
-          this.title = `Already Verified ${this.searchResults?.opened} times`;
-          this.backgroundcolor = '#edead4';
-          this.color ='yellow';
+        case 2:
+          this.title = `Verified twice`;
+          this.alertClass = "alert-secondary";
           break;
-      default:
-        this.title = "Verified Multiple Times Can Not Verify Anymore";
-        this.color = '#a10f0f';
-        this.backgroundcolor = '#edd4d4';
+        default:
+          this.title = "The maximum number of verifications for this code has been reached";
+          this.alertClass = "alert-warning";
           break;
-  }
-  
-  }
+      }
+    }
 }

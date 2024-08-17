@@ -19,13 +19,23 @@
     input[type="text"] {
       flex: 1; /* Input field takes up remaining space */
       margin-right: 10px; /* Adds space between input and button */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
   
     button {
       min-width: 140px; /* Sets a minimum width for the button */
       background-color: #567fbd;
       color: white;
+      transition: 0.3s ease;
     }
+
+    button:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+
+  .message{
+    margin-top: 10%;
   }
 
   .success-message {
@@ -33,6 +43,7 @@
     border-radius: 5px;
     text-align: center;
     margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .no-data{
@@ -43,6 +54,39 @@
     border-radius: 5px;
     text-align: center;
     margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-  
+/* Define the slide-in animation from left to right */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Define the slide-out animation */
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Apply the slide-in animation to the alert */
+.alert.slide-in {
+  animation: slideInFromLeft 0.5s ease-in-out;
+}
+
+/* Apply the slide-out animation to the alert */
+.alert.slide-out {
+  animation: slideOutToLeft 0.5s ease-in-out;
+}

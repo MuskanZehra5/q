@@ -56,6 +56,8 @@ Fullstack with Django:
 # ng build --configuration production
 # cd dist (a folder created after first command)
 # firebase init -- select hosting option directory mai public wali option mai add (dist/sekuverify/browser) 
+# Configure as a single-page app (rewrite all urls to /index.html)? (y/N) y
+# Set up automatic builds and deploys with GitHub? (y/N) n
 # then it will ask to overrite in dist/sekuverify/browser/index.html select no,
 # github pages select no 
 # firebase deploy

@@ -5,6 +5,7 @@
 button{
     background-color: #567fbd;
     color: white;
+    width: 100%;
     transition: 0.3s ease;
 }
 

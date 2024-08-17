@@ -25,6 +25,11 @@
       min-width: 140px; /* Sets a minimum width for the button */
       background-color: #567fbd;
       color: white;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
   }
 
@@ -39,10 +44,11 @@
 }
 
 .table-header{
-    background-color: #d4edda; /* Bootstrap success color */
-    color: #155724; /* Dark green color */
+    background-color: #8ea6cc; /* Bootstrap success color */
+    color: #567fbd; /* Dark green color */
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     margin-bottom: 10px;
+    border: 1px solid black
 }

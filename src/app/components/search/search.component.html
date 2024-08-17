@@ -12,6 +12,7 @@
     <div *ngIf="searchResults && searchResults.length">
       <button class="btn btn-danger" (click)="deleteQrCodesByOrganization()">Delete All QR Codes</button>
   
+      <br/>
       <h3 class="table-header">Data</h3>
       <app-fetchcodes [organization]="organization"></app-fetchcodes>
     </div>
