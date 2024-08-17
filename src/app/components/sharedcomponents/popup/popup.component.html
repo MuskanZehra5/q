@@ -1,0 +1,9 @@
+<div class="popup-overlay" *ngIf="showPopup">
+    <div class="popup-container">
+      <div class="popup-header" [style.color]="this.color" [style.background-color]="this.backgroundcolor">
+        <h2>{{ title }}</h2>
+        <button class="close-btn" (click)="closePopup()">x</button>
+      </div>
+    </div>
+  </div>
+  

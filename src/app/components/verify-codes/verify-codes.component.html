@@ -1,0 +1,20 @@
+<div class="parent">
+    <h1>Verify Your QR Code</h1>
+    <div class="main">
+        <div class="search-container container mt-6">
+        <div class="form-group">
+          <input id="search" type="text" class="form-control" placeholder="Search by Key" [(ngModel)]="key">
+          <button class="btn" (click)="onSearchByKey()">Verify</button>
+        </div>
+      </div>
+    
+      <div *ngIf="keyExists" class="message">
+        <!-- <app-popup [showPopup]="true" [title]="this.title" [color]="this.color" [backgroundcolor]="this.backgroundcolor"></app-popup> -->
+        <div class="success-message" [style.color]="this.color" [style.background-color]="this.backgroundcolor">
+            <h1>{{ this.title }}</h1>
+          </div>
+      </div>
+
+        <h3 *ngIf="!keyExists && this.show" class="no-data">Not Original</h3>
+    </div>
+</div>

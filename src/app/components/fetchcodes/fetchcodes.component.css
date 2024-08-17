@@ -1,0 +1,14 @@
+/* Custom table styles */
+.table th, td {
+    background-color: #567fbd !important; 
+    color: white !important; 
+  }
+
+  h1,h4{
+    color: #567fbd;
+  }
+  /* Custom table styles */
+.table {
+  background-color: #567fbd !important; 
+  color: white !important; 
+}

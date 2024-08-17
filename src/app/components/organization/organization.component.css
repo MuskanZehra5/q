@@ -1,0 +1,46 @@
+.container {
+  margin-top: 5%;
+  max-height: 300px; 
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  background-color: #567fbd;
+}
+
+.card-header {
+  text-align: center;
+  position: sticky;
+  background-color: #567fbd;
+  padding: 10px;
+  top: 0;
+  z-index: 1;
+}
+
+.organization-list {
+  padding: 0;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.organization-list li {
+  display: flex;
+  align-items: center; /* Centering the content vertically */
+  padding: 10px;
+}
+
+.organization-list button {
+  margin-left: auto;
+  border-radius: 3px;
+  background-color: #567fbd;
+  color: white;
+  border: none; 
+}
+
+.organization-list button:hover {
+  background-color: #addfb98b;
+  color: #10892c;
+}
+
+.organization-item {
+  border-bottom: 5px solid #567fbd; 
+}

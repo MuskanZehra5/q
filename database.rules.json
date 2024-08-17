@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "Qrcodes": {
+      ".read": true,  // Allow read access to this path
+      ".write": true  // Allow write access to this path
+    }
+  }
+}

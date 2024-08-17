@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a routerLink="verification" class="navbar-brand">
+    <img class="logo" src="../assets/seku.png" alt="logo">
+  </a>
+
+  <div class="navbar-nav mr-auto">
+    <li class="nav-item" *ngIf="isLoggedIn">
+      <a routerLink="qrcodes" routerLinkActive="active" class="nav-link">QrCode</a>
+    </li>
+    <li class="nav-item" *ngIf="isLoggedIn">
+      <a routerLink="add" routerLinkActive="active" class="nav-link">Add</a>
+    </li>
+    <li class="nav-item" *ngIf="isLoggedIn">
+      <a routerLink="search" routerLinkActive="active" class="nav-link">Search</a>
+    </li>
+    <li class="nav-item" *ngIf="isLoggedIn">
+      <a routerLink="organization" routerLinkActive="active" class="nav-link">Organizations</a>
+    </li>
+  </div>
+
+  <div class="navbar-nav ml-auto auth">
+    <li class="nav-item" *ngIf="!isLoggedIn">
+      <a routerLink="/signin" routerLinkActive="active" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+    </li>
+    <!-- <li class="nav-item" *ngIf="!isLoggedIn">
+      <a routerLink="/signup" class="nav-link bg-dark"><i class="fas fa-user-plus"></i> Sign Up</a>
+    </li> -->
+    <li class="nav-item signout" *ngIf="isLoggedIn">
+      <button (click)="signOut()" class="nav-link btn btn-link"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+    </li>
+  </div>
+</nav>

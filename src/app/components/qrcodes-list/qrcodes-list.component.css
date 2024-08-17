@@ -1,0 +1,34 @@
+.container-fluid{
+  width: 100%;
+  h1{
+    text-align: center;
+  }
+}
+.list {
+  text-align: left;
+  max-width: 100%;
+  margin: auto;
+}
+
+.instruction{
+  align-items: center;
+}
+
+.components{
+  margin-top: 5%;
+}
+
+.table th, td {
+  background-color: #567fbd !important; 
+  color: white !important; 
+}
+
+.table {
+  background-color: #567fbd !important; 
+  color: white !important; 
+}
+
+h1, h4{
+  color: #567fbd;
+}
+

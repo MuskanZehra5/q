@@ -1,0 +1,12 @@
+<!-- src/app/app.component.html -->
+<div>
+  <app-navbar></app-navbar>
+
+  <div class="container-fluid mt-3">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Footer -->
+  <app-footer id="footer" class="footer" (mouseenter)="showFooter()" (mouseleave)="hideFooter()"></app-footer>
+
+</div>

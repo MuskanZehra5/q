@@ -1,0 +1,43 @@
+<div class="container mt-6">
+  <h1>Add QrCodes</h1>
+</div>
+<div class="submit-form">
+  @if (!submitted) {
+  <div>
+    <div class="form-group">
+      <label for="number">Number</label>
+      <input
+        type="number"
+        class="form-control"
+        id="number"
+        required
+        name="number"
+        [(ngModel)]="number"
+        placeholder="Enter number of QrCodes"
+        min="1"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Organization Name</label>
+      <input
+        class="form-control"
+        id="description"
+        required
+        [(ngModel)]="Qrcode.organization"
+        name="organization"
+        placeholder="Enter organization name"
+      />
+    </div>
+
+    <button (click)="saveQrcode()" class="btn btn-success">Submit</button>
+  </div>
+  } @else {
+  <div>
+    <h4>You submitted successfully!</h4>
+    <button class="btn btn-success" (click)="newQrcode()">Add</button>
+  </div>
+  }
+</div>
+<hr>
+<app-fetchcodes></app-fetchcodes>

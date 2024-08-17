@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <h1>QrCodes</h1>
+  <hr>
+  
+  <div class="components">
+    <div class="list row">
+      <div class="col-md-6">
+        <!-- Display list items here -->
+      </div>
+      <div class="col-md-6">
+        <!-- Display details or message here -->
+      </div>
+  </div>
+  
+  <div class="list row">
+    <div class="col-md-8">
+      <h4>QrCodes List</h4>
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllQrcodes()">
+        Remove All
+      </button>
+        <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="Qrcodes?.length">
+          <thead>
+            <tr>
+              <th>Sr No.</th>
+              <th>Id</th>
+              <th>Organization</th>
+              <th>Message</th>
+              <th>Number of Times Opened</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let code of Qrcodes; let i = index" 
+              [class.active]="i === currentIndex"
+              (click)="setActiveQrcode(code, i)">
+              <td>{{ i + 1}}</td>
+              <td>{{ code.key }}</td>
+              <td>{{ code.organization }}</td>
+              <td>{{ code.message }}</td>
+              <td>{{ code.opened }}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+      @if (currentQrcode) {
+      <div>
+        <app-qrcode-details
+          (refreshList)="refreshList()"
+          [Qrcode]="currentQrcode"
+        ></app-qrcode-details>
+      </div>
+      } @else {
+      <div *ngIf="Qrcodes && Qrcodes.length > 0" class="instruction">
+        <h6>Select any code to Update</h6>
+      </div>
+      }
+    </div>
+  </div>
+
+  </div>
+
+
+</div>
+
+

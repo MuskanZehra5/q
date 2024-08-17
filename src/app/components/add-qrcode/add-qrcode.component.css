@@ -1,0 +1,14 @@
+.submit-form {
+  max-width: 50%;
+  margin: auto;
+}
+
+.container h1 {
+  text-align: center;
+  margin: 25px auto;
+  color: #567fbd;
+}
+
+label{
+  color: #567fbd;
+}

@@ -1,0 +1,48 @@
+.parent{
+    margin-top: 10%;
+}
+.parent h1{
+    text-align: center;
+    color: #567fbd;
+}
+.search-container {
+    display: flex;
+    justify-content: center; /* Aligns the container content horizontally */
+    margin-bottom: 20px;
+  
+    .form-group {
+      display: flex;
+      width: 100%;
+      align-items: center; /* Aligns the input and button vertically */
+    }
+  
+    input[type="text"] {
+      flex: 1; /* Input field takes up remaining space */
+      margin-right: 10px; /* Adds space between input and button */
+    }
+  
+    button {
+      min-width: 140px; /* Sets a minimum width for the button */
+      background-color: #567fbd;
+      color: white;
+    }
+  }
+
+  .success-message {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.no-data{
+    text-align: center;
+    background-color: #edd4d4; /* Bootstrap success color */
+    color: #a10f0f; /* Dark green color */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+  

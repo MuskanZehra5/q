@@ -1,0 +1,66 @@
+
+.container h3 {
+    text-align: center;
+    margin: 25px auto;
+  }
+  img{
+    width: 100px;
+  }
+  
+  a{
+    font-size: larger;
+    font-weight: 600;
+  }
+
+.navbar .auth .nav-link {
+  color: #567fbd;
+  cursor: pointer;
+}
+
+.logo{
+  margin-left: 1em;
+}
+
+/* navbar.component.css */
+.navbar .auth .nav-link .fas {
+  margin-right: 0.5rem;
+}
+
+.nav-link.active {
+  color: white; /* Change to the desired color */
+}
+
+.nav-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #567fbd; 
+  transition: width 0.3s ease;
+}
+
+.nav-link::before {
+  left: 50%;
+}
+
+.nav-link::after {
+  right: 50%;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  width: 50%;
+  color: #567fbd;
+}
+
+.signout{
+  margin-left: 50rem;
+}

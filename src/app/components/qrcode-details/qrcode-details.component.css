@@ -1,0 +1,16 @@
+*{
+  color: white;
+}
+.edit-form {
+  max-width: 300px;
+  margin: auto;
+  background-color: #567fbd;
+  padding: 2em;
+  border-radius: 0.5em;
+  margin-top: 30%;
+}
+
+.form-group, label, h4{
+
+  background-color: #567fbd;
+}

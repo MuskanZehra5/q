@@ -1,0 +1,27 @@
+
+.container h3 {
+  text-align: center;
+  margin: 25px auto;
+}
+img{
+  width: 120px;
+}
+
+a{
+  font-size: larger;
+  font-weight: 600;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease; /* Add smooth transition */
+  transform: translateY(100%);
+}
+
+.footer.show {
+  transform: translateY(0); /* Slide the footer up */
+}

@@ -1,0 +1,16 @@
+<div class="container text-primary">
+    <div class="card-header text-light">
+        <h2>Organizations List</h2>
+    </div>
+
+    <ul class="organization-list">
+        <li *ngFor="let organization of uniqueOrganizations" class="list-group-item organization-item" (click)="setOrganization(organization)">
+            {{ organization }}
+            <button (click)="generateExcelFile(organization)" class="btn p-10">
+                <i class="fas fa-file-download"></i> Excel
+            </button>
+        </li>
+    </ul>
+</div>
+<br>
+<app-fetchcodes *ngIf="selectedOrganization" [organization]="selectedOrganization"></app-fetchcodes>

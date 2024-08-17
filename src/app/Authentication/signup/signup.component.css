@@ -1,0 +1,27 @@
+*{
+    color: #567fbd;
+}
+
+button{
+    background-color: #567fbd;
+    color: white;
+}
+
+button:hover{
+  background-color: white;
+  color: #567fbd;
+  border: 1px solid #567fbd ;
+}
+
+
+.card {
+  margin-top: 20%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
